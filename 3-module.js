@@ -2,10 +2,14 @@
 
 const names = require('./4-names')
 const SayHi = require('./5-utils')
-const data =require('./6-alternative-flavor')
+//const {mod, items} =require('./6-alternative-flavor')
+const hat =require('./6-alternative-flavor')
+const tus = require('./7-mind-grenade')
 
-require('./7-mind-grenade')
+
 
  SayHi('susan')
  SayHi(names.jhon)
  SayHi(names.peter)
+ console.log(hat)
+//  console.log(data.items)
