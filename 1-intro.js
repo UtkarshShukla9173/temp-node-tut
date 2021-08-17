@@ -5,6 +5,6 @@ if (amount<10){
 
 }
 else {
-    console.log('large no.');
+    console.log('large no:');
 }
 console.log(`first js program ${amount}`);
