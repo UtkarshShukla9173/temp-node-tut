@@ -1,5 +1,15 @@
-const _ =require('lodash')
-const items = [1,[2,[3,[4]]]]
-const   newItems = _.flattenDeep(items)
-console.log(newItems)
-console.log('hello p')
+var http = require('http')
+var fs = require('fs')
+
+http.createServer(function (req,res){
+    // const text = fs.readFileSync('./content/big.txt','utf8')
+    // res.end(text)
+    const fileStream = fs.createReadStream('./content/big.txt','utf8');
+    fileStream.on('open',()=>{
+        fileStream.pipe(res)     //pipe pushes from read stream to write stream.
+    })
+    fileStream.on('error', (err)=>{
+        res.end(err)
+    })
+})
+.listen(5000)
